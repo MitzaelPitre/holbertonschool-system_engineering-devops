@@ -1,1 +1,53 @@
 https://imgur.com/gallery/web-infrastructure-example-3-TL6x9lS
+
+Whiteboard Explanation
+
+Okay, let's start with the infrastructure design. We have a three-server web infrastructure that hosts the website www.foobar.com. We added several elements to make it secure, serve encrypted traffic, and monitor the infrastructure.
+
+Firewalls
+
+We added three firewalls to protect our infrastructure from external attacks. Firewalls are used to block unauthorized access to our servers and prevent malicious traffic from entering our network. We have one firewall in front of the load balancer, one in front of the web servers, and one in front of the database server.
+
+SSL Certificate
+
+We added an SSL certificate to serve www.foobar.com over HTTPS. This ensures that all traffic between the client and server is encrypted, making it more secure. We're using HTTPS to protect user data and prevent eavesdropping.
+
+Monitoring Clients
+
+We added three monitoring clients to collect data from our infrastructure. We're using Sumologic to monitor our infrastructure and detect any issues. The monitoring tool collects data from our servers and sends it to the monitoring service, where we can view metrics and alerts.
+
+Specifics about the infrastructure
+
+Why are we adding firewalls?
+
+We're adding firewalls to protect our infrastructure from external attacks and prevent malicious traffic from entering our network.
+
+Why is the traffic served over HTTPS?
+
+We're serving traffic over HTTPS to ensure that all data is encrypted and secure.
+
+What is monitoring used for?
+
+Monitoring is used to detect issues with our infrastructure and ensure that everything is running smoothly.
+
+How does the monitoring tool collect data?
+
+The monitoring tool collects data from our servers and sends it to the monitoring service, where we can view metrics and alerts.
+
+Issues with the infrastructure
+
+Why terminating SSL at the load balancer level is an issue?
+
+Terminating SSL at the load balancer level can be an issue because it can create a bottleneck and make it harder to manage SSL certificates.
+
+Why having only one MySQL server capable of accepting writes is an issue?
+
+Having only one MySQL server capable of accepting writes can be an issue because if it goes down, our database will be unavailable.
+
+Why having servers with all the same components might be a problem?
+
+Having servers with all the same components might be a problem because if one server goes down, all the components will be affected, and it can be harder to manage and maintain.
+
+Monitoring Web Server QPS
+
+If we want to monitor our web server QPS (Queries Per Second), we can use the monitoring tool to collect data on the number of requests per second and view the metrics in the monitoring service. We can also set up alerts to notify us if the QPS exceeds a certain threshold.

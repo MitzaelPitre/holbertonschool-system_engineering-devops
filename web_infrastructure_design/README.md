@@ -70,4 +70,19 @@ Mitzael Pitre De Jesus
  
 mitzaelpitredejesus@gmail.com
 
+## Web server vs App server
 
+Web Server vs Application Service
+
+A web server is a software that stores and delivers content to clients who request it, such as text, images, videos, and application data. The most common communication protocol is HTTP, and the content can be static or dynamic. Web servers can cache content to speed up delivery and can limit the speed of response to different clients.
+
+On the other hand, an application service is a set of technologies that interact with the application environment to ensure its performance, security, and operability. These services include traffic management, web application firewalls, load balancing, DDoS protection, and API management. Application services help organizations improve the efficiency, adaptability, and security of their applications.
+
+Differences:
+
+- A web server focuses on delivering content to clients, while an application service focuses on ensuring the security and performance of the application.
+- A web server is a software that runs on a server, while an application service is a set of technologies that integrate with the application.
+- A web server can cache content, while an application service can manage traffic and protect against attacks.
+Conclusion
+
+In summary, a web server is a software that delivers content to clients, while an application service is a set of technologies that ensure the security and performance of the application. Both are important for content delivery and application security, but they focus on different aspects.

@@ -1,1 +1,46 @@
 https://imgur.com/gallery/web-infrastructure-example-2-wZBy7s9
+
+Whiteboard Explanation
+
+Okay, let's start with the infrastructure design. We have a three-server web infrastructure that hosts the website www.foobar.com. We added two more servers to the original design to improve scalability and availability.
+
+Load Balancer (HAproxy)
+
+We added a load balancer to distribute incoming traffic across multiple servers. This way, if one server is busy or goes down, the other servers can take over.
+
+Additional Servers
+
+We added two more servers to increase capacity and reduce the load on individual servers. This makes our infrastructure more resilient to high traffic and failures.
+
+Database Primary-Replica Cluster
+
+We set up a database Primary-Replica cluster to ensure data consistency and high availability. The Primary node (Master) accepts writes and updates, while the Replica node (Slave) is a read-only copy that's updated in real-time.
+
+Why did we add a load balancer?
+
+We added a load balancer to distribute traffic and improve scalability and availability.
+
+What algorithm does the load balancer use?
+The load balancer uses a Round-Robin algorithm.
+
+What's the difference between Active-Active and Active-Passive setup?
+
+Active-Active means both servers are active and receive traffic, while Active-Passive means one server is active and the other is passive and only takes over in case of failure.
+
+How does the database Primary-Replica cluster work?
+
+The Primary node accepts writes and updates, while the Replica node is a read-only copy that's updated in real-time.
+
+Issues with the Infrastructure:
+
+Where are the Single Points of Failure (SPOF)?
+
+The load balancer and the Primary node are SPOF, as if they fail, the entire infrastructure becomes unavailable.
+
+What security issues do we have?
+
+We don't have a firewall, so we're vulnerable to external attacks, and we don't have HTTPS, so data is not encrypted.
+
+What's missing from our infrastructure?
+
+We don't have monitoring in place to detect issues with the infrastructure, so we might not notice problems until it's too late.

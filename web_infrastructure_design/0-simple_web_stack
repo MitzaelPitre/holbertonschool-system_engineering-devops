@@ -1,1 +1,50 @@
 https://imgur.com/gallery/web-infrastructure-example-1-PhY5Pv7
+
+A simple explanation of the one server web infrastructure:
+
+1. User wants to access the website
+
+A user types www.foobar.com in their web browser and presses Enter.
+
+2. DNS Resolution
+
+The user's computer sends a request to a DNS server to resolve the domain name www.foobar.com to an IP address. The DNS server responds with the IP address 8.8.8.8, which is the IP address of our server.
+
+3. Server Receives Request
+
+The user's web browser sends a request to our server at IP address 8.8.8.8. Our server is running Nginx web server, which receives the request.
+
+3. Nginx Forwards Request
+
+Nginx forwards the request to our application server, which is running on the same server.
+
+4. Application Server Processes Request
+
+Our application server processes the request and retrieves the necessary data from our MySQL database.
+
+5. Database Retrieves Data
+
+Our MySQL database retrieves the requested data and sends it back to the application server.
+
+6. Application Server Sends Response
+
+Our application server sends the response back to Nginx, which then sends it back to the user's web browser.
+
+7. User Sees Website
+
+The user sees the website www.foobar.com in their web browser.
+
+That's the web infrastructure that hosts a website and serve like example in the whiteboard image. Now the problem with this infrastructure is:
+
+1. Single Point of Failure (SPOF)
+
+The single server is a SPOF, meaning that if it goes down, the entire website is unavailable. This can happen due to hardware failure, software issues, or other reasons.
+
+2. Downtime during Maintenance
+
+When maintenance is needed, such as deploying new code, the web server needs to be restarted. This can cause downtime for the website, which can be frustrating for users.
+
+3. Cannot Scale with High Traffic
+
+The single server cannot handle a large amount of incoming traffic. If the website becomes very popular, the server may become overwhelmed, leading to slow response times or even crashes. This can result in a poor user experience and lost business.
+
