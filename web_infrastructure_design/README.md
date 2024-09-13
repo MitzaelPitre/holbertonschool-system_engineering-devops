@@ -64,12 +64,6 @@ Requirements:
 1 load-balancer (HAproxy) configured as cluster with the other one
 Split components (web server, application server, database) with their own server
 
-## Author
-
-Mitzael Pitre De Jesus
- 
-mitzaelpitredejesus@gmail.com
-
 ## Web server vs App server
 
 Web Server vs Application Service
@@ -85,4 +79,10 @@ Differences:
 - A web server can cache content, while an application service can manage traffic and protect against attacks.
 Conclusion
 
-In summary, a web server is a software that delivers content to clients, while an application service is a set of technologies that ensure the security and performance of the application. Both are important for content delivery and application security, but they focus on different aspects.
+In summary, a web server is a software that delivers content to clients, while an application service is a set of technologies that ensure the security and performance ofthe application. Both are important for content delivery and application security, but they focus on different aspects.
+
+## Author
+
+Mitzael Pitre De Jesus
+
+mitzaelpitredejesus@gmail.com
